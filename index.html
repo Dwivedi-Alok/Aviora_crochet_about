@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Aviora Crochet – Partner Introduction</title>
+    <meta name="description"
+        content="Aviora Crochet — a boutique Indian handmade gifting brand. Premium crochet products crafted with intention for retail and business partners.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=Dancing+Script:wght@500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── Design Tokens ── */
+        :root {
+            --bg: #F5F3ED;
+            --bg-alt: #EDE9E0;
+            --card: rgba(255, 255, 253, 0.72);
+            --card-solid: #FDFCF9;
+            --ink: #2B2320;
+            --ink-soft: #3D3530;
+            --mute: #8A7E76;
+            --coral: #D9726F;
+            --coral-light: #E8928F;
+            --coral-glow: rgba(217, 114, 111, 0.15);
+            --sage: #7FA47D;
+            --sage-light: #A5C4A3;
+            --sage-glow: rgba(127, 164, 125, 0.12);
+            --sand: #D4B88A;
+            --sand-light: #E8D3B0;
+            --line: #DED8CA;
+            --shadow-sm: 0 2px 8px rgba(43, 35, 32, 0.04);
+            --shadow-md: 0 8px 32px rgba(43, 35, 32, 0.07);
+            --shadow-lg: 0 16px 48px rgba(43, 35, 32, 0.10);
+            --radius: 20px;
+            --radius-lg: 28px;
+            box-sizing: border-box;
+            color-scheme: light;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #1A1614;
+                --bg-alt: #221E1B;
+                --card: rgba(42, 37, 35, 0.75);
+                --card-solid: #2A2523;
+                --ink: #F0EBE0;
+                --ink-soft: #D8D0C5;
+                --mute: #9E9590;
+                --line: #3E3835;
+                --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+                --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.25);
+                --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.35);
+                --coral-glow: rgba(217, 114, 111, 0.2);
+                --sage-glow: rgba(127, 164, 125, 0.15);
+                color-scheme: dark;
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #1A1614;
+            --bg-alt: #221E1B;
+            --card: rgba(42, 37, 35, 0.75);
+            --card-solid: #2A2523;
+            --ink: #F0EBE0;
+            --ink-soft: #D8D0C5;
+            --mute: #9E9590;
+            --line: #3E3835;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.25);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.35);
+            --coral-glow: rgba(217, 114, 111, 0.2);
+            --sage-glow: rgba(127, 164, 125, 0.15);
+            color-scheme: dark;
+        }
+
+        /* ── Reset & Base ── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: env(safe-area-inset-top, 0px);
+        }
+
+        body {
+            margin: 0;
+            background:
+                linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.18) 47%, transparent 100%),
+                var(--bg);
+            color: var(--ink);
+            font-family: Jost, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.75;
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Decorative Background ── */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            right: -30%;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--coral-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: -40%;
+            left: -20%;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--sage-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ── Layout ── */
+        .wrap {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 36px);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            text-align: center;
+            padding: 68px 0 24px;
+        }
+
+        .hero-logo-wrap {
+            display: inline-block;
+            position: relative;
+        }
+
+        .hero-logo-wrap::before {
+            content: "";
+            position: absolute;
+            inset: -16px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--coral-glow) 30%, transparent 70%);
+            opacity: 0.6;
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.05);
+            }
+        }
+
+        .hero img {
+            width: min(268px, 68vw);
+            border-radius: 26px;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 12px 40px rgba(43, 35, 32, 0.12));
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .hero img:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .tag {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: var(--coral);
+            margin: 20px 0 8px;
+            letter-spacing: 0.01em;
+        }
+
+        .sub {
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--mute);
+        }
+
+        .thread {
+            height: 2px;
+            margin: 25px auto 18px;
+            width: 124px;
+            border-radius: 2px;
+            background: linear-gradient(90deg,
+                    var(--coral) 0%, var(--coral) 33%,
+                    var(--sage) 33%, var(--sage) 66%,
+                    var(--sand) 66%, var(--sand) 100%);
+            opacity: 0.8;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 7px 20px;
+            color: var(--mute);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-meta span + span::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--coral);
+        }
+
+        /* ── Sections ── */
+        section {
+            padding: 48px 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .num {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 600;
+            color: var(--coral);
+            font-size: 22px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1px;
+        }
+
+        .num::after {
+            content: "";
+            width: 29px;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.55;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 700;
+            font-size: clamp(28px, 5vw, 38px);
+            margin: 4px 0 15px;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            font-size: 23px;
+            margin: 0 0 8px;
+            line-height: 1.25;
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: var(--ink-soft);
+        }
+
+        section > p:not(.lead):not(.section-note) {
+            max-width: 70ch;
+        }
+
+        .lead {
+            max-width: 38ch;
+            font-size: clamp(18px, 2.1vw, 20px);
+            line-height: 1.75;
+            color: var(--ink);
+        }
+
+        /* ── Cards ── */
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            margin-top: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 27px 26px 25px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: var(--radius) var(--radius) 0 0;
+            transition: height 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card:hover::before {
+            height: 6px;
+        }
+
+        .card.c1::before {
+            background: linear-gradient(90deg, var(--coral), var(--coral-light));
+        }
+
+        .card.c2::before {
+            background: linear-gradient(90deg, var(--sage), var(--sage-light));
+        }
+
+        .card.c3::before {
+            background: linear-gradient(90deg, var(--sand), var(--sand-light));
+        }
+
+        .card p {
+            color: var(--mute);
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .card h3 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-note {
+            margin: 20px 0 0;
+            color: var(--mute);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        /* ── Timeline ── */
+        .tl {
+            border-left: 1px dashed var(--sage);
+            margin: 19px 0 0 10px;
+            padding-left: 29px;
+        }
+
+        .tl div {
+            position: relative;
+            margin-bottom: 24px;
+            padding: 18px 20px 17px;
+            background: var(--card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tl div:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tl div::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 22px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--coral);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 3px var(--coral-glow);
+        }
+
+        .tl b {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .timeline-label {
+            display: inline-block;
+            margin-bottom: 4px;
+            color: var(--coral);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ── Notice ── */
+        .notice {
+            background: var(--card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-left: 4px solid var(--coral);
+            border-radius: 14px;
+            padding: 21px 24px 19px;
+            margin-top: 22px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .notice::before {
+            content: "⚠";
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            background: var(--card-solid);
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ── Chips ── */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .chips span {
+            background: var(--card);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            padding: 9px 17px;
+            font-size: 13px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .chips span:hover {
+            background: var(--coral-glow);
+            border-color: var(--coral-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* ── Lists ── */
+        ul {
+            padding-left: 0;
+            margin: 12px 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.7;
+            color: var(--ink-soft);
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--coral), var(--coral-light));
+        }
+
+        li b {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .work-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .work-list li {
+            margin: 0;
+            padding: 14px 17px 14px 42px;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            background: var(--card);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .work-list li::before {
+            top: 22px;
+            left: 18px;
+        }
+
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .benefit-list li {
+            display: flex;
+            align-items: center;
+            min-height: 58px;
+            margin: 0;
+            padding: 13px 16px 13px 39px;
+            border: 1px solid var(--line);
+            border-radius: 13px;
+            background: var(--card);
+            box-shadow: var(--shadow-sm);
+            line-height: 1.5;
+        }
+
+        .benefit-list li::before {
+            top: 50%;
+            left: 17px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, var(--sage), var(--sage-light));
+        }
+
+        .terms-list {
+            margin-top: 20px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .terms-list li {
+            margin: 0;
+            padding: 15px 4px 15px 26px;
+        }
+
+        .terms-list li + li {
+            border-top: 1px solid var(--line);
+        }
+
+        .terms-list li::before {
+            top: 24px;
+            width: 7px;
+            height: 7px;
+        }
+
+        /* ── Contact ── */
+        .contact {
+            --contact-cream: #fff9ef;
+            --contact-muted: rgba(255, 249, 239, 0.72);
+            --contact-line: rgba(255, 249, 239, 0.16);
+            background:
+                radial-gradient(circle at 88% 8%, rgba(232, 146, 143, 0.20), transparent 25%),
+                radial-gradient(circle at 4% 95%, rgba(165, 196, 163, 0.17), transparent 28%),
+                linear-gradient(135deg, #29201e 0%, #3a2d29 52%, #4b3731 100%);
+            color: var(--contact-cream);
+            border-radius: var(--radius-lg);
+            padding: 54px 42px 32px;
+            text-align: center;
+            box-shadow: 0 22px 48px rgba(43, 35, 32, 0.20);
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .contact::before {
+            content: "";
+            position: absolute;
+            top: 22px;
+            right: 28px;
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 249, 239, 0.10);
+            box-shadow: 0 0 0 22px rgba(255, 249, 239, 0.035), 0 0 0 48px rgba(255, 249, 239, 0.02);
+            z-index: -1;
+        }
+
+        .contact::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 249, 239, 0.34), transparent);
+        }
+
+        .contact h2 {
+            color: var(--contact-cream);
+            margin: 4px 0 5px;
+            position: relative;
+            font-size: clamp(36px, 5vw, 48px);
+            line-height: 1.05;
+        }
+
+        .contact>div {
+            position: relative;
+        }
+
+        .contact .contact-eyebrow {
+            margin: 0;
+            color: var(--sand-light);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .contact .proprietor {
+            color: var(--contact-muted);
+            font-size: 15px;
+            margin: 0 auto 27px;
+        }
+
+        .contact a {
+            color: inherit;
+            text-decoration: none;
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+        }
+
+        .contact .contact-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            max-width: 650px;
+            margin: 0 auto 24px;
+        }
+
+        .contact .contact-action {
+            display: flex;
+            align-items: center;
+            min-width: 0;
+            gap: 13px;
+            padding: 16px 17px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--contact-line);
+            border-radius: 14px;
+        }
+
+        .contact .contact-action:hover,
+        .contact .contact-action:focus-visible {
+            background: rgba(255, 255, 255, 0.13);
+            border-color: rgba(232, 211, 176, 0.55);
+            transform: translateY(-2px);
+            outline: none;
+        }
+
+        .contact .contact-icon {
+            display: grid;
+            flex: 0 0 38px;
+            width: 38px;
+            height: 38px;
+            place-items: center;
+            border-radius: 50%;
+            color: #3a2d29;
+            background: var(--sand-light);
+        }
+
+        .contact .contact-icon svg {
+            width: 17px;
+            height: 17px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact .contact-label {
+            display: block;
+            color: var(--contact-muted);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .contact .contact-value {
+            display: block;
+            overflow-wrap: anywhere;
+            color: var(--contact-cream);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.45;
+        }
+
+        .contact .contact-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px 18px;
+            margin: 0;
+            color: var(--contact-muted);
+            font-size: 14px;
+        }
+
+        .contact .contact-meta a {
+            border-bottom: 1px solid rgba(232, 211, 176, 0.5);
+            color: var(--sand-light);
+        }
+
+        .contact .contact-meta a:hover,
+        .contact .contact-meta a:focus-visible {
+            color: var(--contact-cream);
+            border-color: var(--contact-cream);
+            outline: none;
+        }
+
+        .contact .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            margin: 17px 0 0;
+            color: var(--contact-muted);
+            font-size: 12px;
+            letter-spacing: 0.04em;
+        }
+
+        .contact .location svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: var(--sage-light);
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 40px 0 50px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: var(--coral);
+            opacity: 0.85;
+        }
+
+        /* ── Separator ── */
+        .section-sep {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--coral), var(--sage));
+            margin: 0 0 22px;
+            border: none;
+            border-radius: 1px;
+            opacity: 0.5;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 40px 0 16px;
+            }
+
+            .hero img {
+                width: min(250px, 68vw);
+            }
+
+            .tag {
+                font-size: 23px;
+            }
+
+            section {
+                padding: 36px 0;
+            }
+
+            .hero-meta {
+                gap: 6px 12px;
+                font-size: 10px;
+            }
+
+            .benefit-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                padding: 42px 20px 27px;
+                border-radius: var(--radius);
+            }
+
+            .contact .contact-actions {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-bottom: 21px;
+            }
+
+            .contact .contact-action {
+                padding: 13px 15px;
+            }
+
+            .contact .contact-meta {
+                gap: 8px 13px;
+                font-size: 13px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ── Print ── */
+        @media print {
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            body::before,
+            body::after,
+            .hero-logo-wrap::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header class="hero fade-in">
+            <div class="hero-logo-wrap">
+                <img src="Gemini_Generated_Image_kmg41vkmg41vkmg4_2_uk5hra.png" alt="Aviora Crochet logo">
+            </div>
+            <div class="tag">Handmade with intention. Gifted with meaning.</div>
+            <div class="sub">Introduction</div>
+            <div class="thread"></div>
+            <div class="hero-meta" aria-label="Aviora at a glance">
+                <span>Online-first studio</span>
+                <span>Custom orders</span>
+                <span>Retail + bulk</span>
+            </div>
+        </header>
+
+        <main>
+        <section class="fade-in">
+            <span class="num">01</span>
+            <h2>About Us</h2>
+            <hr class="section-sep">
+            <p class="lead">Aviora Crochet is a boutique Indian handmade gifting brand built around intentional,
+                personalized, slow-crafted crochet products.</p>
+            <p>We believe gifts should carry time, care and human emotion, as an alternative to mass-produced, hurried
+                gifting. Founded and run by <b>Alok Kumar Dwivedi</b> as a proprietorship, Aviora is in its development
+                and growth phase, actively building its range, processes and partnerships.</p>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">02</span>
+            <h2>Our Journey</h2>
+            <hr class="section-sep">
+            <div class="tl">
+                <div><span class="timeline-label">Until March 2026</span><br>Online retail, selling directly to individual customers through
+                    Instagram and our store, aviorcrochet.shop.</div>
+                <div><span class="timeline-label">From March 2026</span><br>Began accepting bulk and mass orders through direct calls and email,
+                    serving business customers alongside retail.</div>
+                <div><span class="timeline-label">Today</span><br>Under active development. No physical store; we work fully online and by direct
+                    contact.</div>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">03</span>
+            <h2>What We Offer</h2>
+            <hr class="section-sep">
+            <p>Two customer segments, two clear quality tiers.</p>
+            <div class="grid">
+                <div class="card c1">
+                    <h3>Retail Customers</h3>
+                    <p>Premium handmade products, crafted on demand with personalization for gifting occasions.</p>
+                </div>
+                <div class="card c2">
+                    <h3>Business Customers</h3>
+                    <p>Reliable, quality products at affordable, competitive prices for corporate gifting, events,
+                        resellers and bulk needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">04</span>
+            <h2>Product Range</h2>
+            <hr class="section-sep">
+            <div class="grid">
+                <div class="card c1">
+                    <h3>Amigurumi &amp; Décor</h3>
+                    <p>Heart plants with smiling pots, little octopuses, character pieces, desk décor.</p>
+                </div>
+                <div class="card c2">
+                    <h3>Bouquets &amp; Gifts</h3>
+                    <p>Crochet roses and lavender bouquets for festivals, anniversaries and Valentine's Day.</p>
+                </div>
+                <div class="card c3">
+                    <h3>Accessories</h3>
+                    <p>Chashma keepers in watermelon and lemon designs, bags, keychains, heart pouches.</p>
+                </div>
+                <div class="card c1">
+                    <h3>Traditional Hair Pieces</h3>
+                    <p>Crochet flowers woven into parandis for weddings and festive styling.</p>
+                </div>
+            </div>
+            <p class="section-note">Custom designs and personalization available
+                based on requirement and quantity.</p>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">05</span>
+            <h2>How We Work</h2>
+            <hr class="section-sep">
+            <ul class="work-list">
+                <li><b>Retail orders:</b> made on demand with premium handcrafting, via Instagram or our online store.
+                </li>
+                <li><b>Mass orders:</b> handled by call and email. We confirm requirements, pricing, timelines and
+                    quantity, then deliver through our production network.</li>
+                <li><b>Single point of contact:</b> every deal is made directly through Aviora Crochet, so customers and
+                    partners always deal with one accountable team for production, quality and delivery.</li>
+            </ul>
+            <div class="notice"><b>Supplier policy.</b> Our production partners work exclusively through Aviora Crochet.
+                Direct contact between customers or partners and our suppliers is not permitted; all negotiations and
+                orders go through us.</div>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">06</span>
+            <h2>Why Partner With Us</h2>
+            <hr class="section-sep">
+            <ul class="benefit-list">
+                <li>Best-value pricing for mass orders, affordable options for retail</li>
+                <li>Two quality tiers: premium handmade and quality bulk</li>
+                <li>Personalization and custom design flexibility</li>
+                <li>Founder-led, responsive and direct communication</li>
+                <li>A growing brand with a distinctive, emotion-led identity</li>
+            </ul>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">07</span>
+            <h2>Partnership Opportunities</h2>
+            <hr class="section-sep">
+            <div class="chips">
+                <span>Corporate &amp; event gifting</span>
+                <span>Resellers &amp; gift stores</span>
+                <span>Festive &amp; wedding gifting</span>
+                <span>Co-branded products</span>
+                <span>Marketing &amp; cross-promotion</span>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <span class="num">08</span>
+            <h2>Working Terms</h2>
+            <hr class="section-sep">
+            <p>To be finalised per partnership.</p>
+            <ul class="terms-list">
+                <li>Pricing based on product, quantity and customization</li>
+                <li>Order confirmation, advance payment and delivery timeline agreed in writing by email</li>
+                <li>All communication and negotiation routed through Aviora Crochet only</li>
+            </ul>
+        </section>
+
+        <section class="fade-in contact-section">
+            <div class="contact" aria-labelledby="contact-heading">
+                <p class="contact-eyebrow">Start a conversation</p>
+                <h2 id="contact-heading">Let's Create Together</h2>
+                <div class="proprietor">Alok Kumar Dwivedi, Proprietor</div>
+                <div class="contact-actions">
+                    <a class="contact-action" href="tel:+919315804493" aria-label="Call Aviora Crochet at +91 93158 04493">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.8 2Z"/></svg>
+                        </span>
+                        <span>
+                            <span class="contact-label">Call / WhatsApp</span>
+                            <span class="contact-value">+91 93158 04493</span>
+                        </span>
+                    </a>
+                    <a class="contact-action" href="mailto:alok.kumardwivedi@aviorcrochet.shop" aria-label="Email Aviora Crochet">
+                        <span class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        </span>
+                        <span>
+                            <span class="contact-label">Email us</span>
+                            <span class="contact-value">alok.kumardwivedi@aviorcrochet.shop</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="contact-meta">
+                    <a href="https://www.instagram.com/aviora_crochet/" target="_blank" rel="noopener noreferrer">Instagram @aviora_crochet</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="https://aviorcrochet.shop" target="_blank" rel="noopener noreferrer">aviorcrochet.shop</a>
+                </div>
+                <div class="location">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    <span>Gurugram · Jaipur · Mandsaur, India · Online operations</span>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <footer class="fade-in">crafted slowly, gifted lovingly</footer>
+    </div>
+
+    <script>
+        // Scroll-triggered fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation for cards within the section
+                    const cards = entry.target.querySelectorAll('.card, .tl > div, .chips span');
+                    cards.forEach((card, i) => {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(16px)';
+                        card.style.transition = `opacity 0.5s ${i * 0.1 + 0.2}s cubic-bezier(0.22,1,0.36,1), transform 0.5s ${i * 0.1 + 0.2}s cubic-bezier(0.22,1,0.36,1)`;
+                        requestAnimationFrame(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        });
+                    });
+
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
